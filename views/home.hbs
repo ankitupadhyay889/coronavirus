@@ -1,0 +1,28 @@
+<h1 class="ko" style="text-align: center;">Covid 19 Update by country wise</h1>
+
+<style>
+    .ak{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-left: 850px;
+    }
+    .ko{
+        font-size: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-bottom: 50px;
+        text-decoration: underline;
+    }
+</style>
+
+{{#each info as |val key| }}
+
+<h1 class="ak">Country Name : {{val.country}}</h1>
+
+<h1 class="ak"> Total cases : {{val.cases}}</h1>
+
+<h1 class="ak" style="color: green;"> Total recover : {{val.recovered}}</h1>
+
+<h1 class="ak" style="color: red;"> Total death : {{val.deaths}}</h1><br />
+
+<img class="ak" src="{{val.countryInfo.flag}}"/><br /> 
+
+{{/each}}
